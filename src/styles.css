@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: OstrichSans-Black;
+    src: url('/assets/fonts/OstrichSans-Black.otf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button, 
+button:active, 
+button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}

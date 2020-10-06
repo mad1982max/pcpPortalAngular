@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 central-text text-center p-2">
+            TENNET'S OFSHORE PROJECTS GERMANY
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4 wrapper" *ngFor= "let platform of platforms">
+            <div class="shadow-box">
+                <div  
+                    [ngClass] = "{'img-grey': !platform.isActive}" class="platform-block">
+                        <a *ngIf = "!platform.isActive">
+                            <img src="./assets/img/platforms/{{platform.alias}}.jpg" alt="img"> 
+                        </a>
+                        <a *ngIf = "platform.isActive" [routerLink]="['/platformScheme']" [queryParams]="{alias: platform.alias}">
+                            <img src="./assets/img/platforms/{{platform.alias}}.jpg" alt="img">
+                        </a>
+                </div>
+                <div class="title">
+                    {{platform.alias}}
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>

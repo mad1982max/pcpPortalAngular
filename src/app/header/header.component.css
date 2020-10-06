@@ -1,0 +1,40 @@
+
+
+
+.header {
+    background: #000;
+    color: white;
+    font-size: 40px;
+    font-family: OstrichSans-Black;
+}
+
+.header-light {
+    color: #000;
+    background: rgb(252, 252, 252);
+}
+
+img {
+    width: 100%; 
+}
+
+.btn-container {
+    width: 45px;
+}
+
+.btn-back, .btn-download {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+button, 
+button:active, 
+button:focus, a.btn {
+    box-shadow: none !important;
+    outline: none !important;
+}

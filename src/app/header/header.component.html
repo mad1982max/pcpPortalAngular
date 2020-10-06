@@ -1,0 +1,41 @@
+<div class="container-fluid header" *ngIf = "currentRoot === ''">
+    <div class="row">
+        <div class="col">VCOG PCP PORTAL</div>
+        <div class="col col-auto d-flex px-1">
+            <button 
+                class="btn btn-container px-0" 
+                type="button"
+                (click) = "logout()">
+                <img src="./assets/icons/logout.png" alt="">
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid header header-light" *ngIf = "currentRoot === 'others'">
+    <div class="row justify-content-between">
+        <div class="col-auto pl-1 d-flex align-items-center">
+            <button class="btn btn-back" type="button" (click) = "goBack()"
+                id="backButton">
+                <img class="backArrow" src="./assets/icons/back_arrow.svg" alt="">
+            </button>
+        </div>
+        <div class="col-auto">
+            <div class="">
+                {{currentName}}
+            </div>
+        </div>
+        <div class="col-auto px-0 btn-menu d-flex">
+            <div class="d-flex dropdown d-flex align-items-center">
+                <a class="btn btn-menu btn-download" href="ftp://@79.160.140.197">
+                    <img src="./assets/icons/download.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid header" *ngIf = "currentRoot === 'none'">
+    <div class="col">NONE</div>
+</div>
+
